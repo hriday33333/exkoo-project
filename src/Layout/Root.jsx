@@ -26,6 +26,8 @@ import {
   Waypoints,
 } from 'lucide-react';
 import Table from '../Components/Table';
+import LeadsHeader from '../Components/LeadsHeader';
+import Pagination from '../Components/Pagination';
 
 const Root = () => {
   return (
@@ -196,12 +198,10 @@ const Root = () => {
                 </ul>
               </div>
             </div>
-            <div className="border min-h-screen flex-5 p-3">
-              <div className="w-full border mx-auto h-20">fff</div>
+            <div className="  min-h-screen flex-5 p-3">
+              <LeadsHeader></LeadsHeader>
               <Table></Table>
-              <div className='border'>
-                hh
-              </div>
+             <Pagination></Pagination>
             </div>
           </div>
         </div>

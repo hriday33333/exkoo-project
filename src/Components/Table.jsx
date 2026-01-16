@@ -448,155 +448,558 @@ const Table = () => {
 <div className="block md:hidden space-y-4">
 
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Test imran number</div>
-        <div className="text-xs opacity-60">Jan 1, 2026</div>
-      </div>
+ <div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-shadow border-l-4 border-l-green-500 duration-300">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-blue-50 rounded-lg">
+      <User className="text-green-600 w-6 h-6" />
     </div>
-    <div><b>Source:</b> ZDSL</div>
-    <div><b>Stage:</b> Intersected</div>
-    <div><b>Groups:</b> Wrong Number, Test Groups, High Budget, +1</div>
-    <div><b>Follow:</b> __</div>
-    <div><b>Company:</b> __</div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Test Imran Number</div>
+      <div className="text-xs text-gray-400 font-medium">Jan 1, 2026</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Engr nur Islam</div>
-        <div className="text-xs opacity-60">Nov 3,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    <div className="flex justify-between border-b border-gray-50 pb-1">
+      <span className="text-gray-500">Source</span>
+      <span className="font-medium text-gray-700">ZDSL</span>
+    </div>
+
+    <div className="flex justify-between border-b border-gray-50 pb-1">
+      <span className="text-gray-500">Stage</span>
+      <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full text-xs font-bold">
+        Intersected
+      </span>
+    </div>
+
+    <div className="space-y-1.5">
+      <span className="text-gray-500 block text-xs uppercase tracking-wider font-semibold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        {["Wrong Number", "Test Groups", "High Budget"].map((tag) => (
+          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[11px]">
+            {tag}
+          </span>
+        ))}
+        <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-[11px] font-bold">+1</span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Converted</div>
-    <div><b>Groups:</b> Wrong Number, Test Groups, VIP, +4</div>
-    <div><b>Follow:</b> Dec 26,2025 Call +2</div>
-    <div><b>Company:</b> Career i</div>
+
+    <div className="grid grid-cols-2 gap-4 pt-2">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow</span>
+        <span className="text-gray-300">—</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-300">—</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-blue-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-blue-50 rounded-lg">
+      <User className="text-blue-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Engr Nur Islam</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 3, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">MD Jasim Uddin</div>
-        <div className="text-xs opacity-60">Nov 3,2025</div>
+
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">
+          Converted
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Intake</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> Nov 12,2025 Call</div>
-    <div><b>Company:</b> Speedy</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1.5">
+      <span className="text-gray-500 block text-[11px] uppercase tracking-wider font-bold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        {["Wrong Number", "Test Groups", "VIP"].map((tag) => (
+          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[10px] border border-gray-200">
+            {tag}
+          </span>
+        ))}
+        <span className="px-2 py-1 bg-indigo-50 text-indigo-600 rounded text-[10px] font-bold border border-indigo-100">+4</span>
+      </div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Dec 26, 2025</span>
+        <span className="text-blue-500 text-[10px] block font-semibold">Call +2</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">Career i</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ <div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-orange-400">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-orange-50 rounded-lg">
+      <User className="text-orange-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">MD Jasim Uddin</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 3, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Muhammad Khokan</div>
-        <div className="text-xs opacity-60">Nov 3,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-orange-100 text-orange-700 rounded-full text-xs font-bold">
+          Intake
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Contacted</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> Nov 4,2025 Call</div>
-    <div><b>Company:</b> M.M.Tr</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1.5">
+      <span className="text-gray-500 block text-[11px] uppercase tracking-wider font-bold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        <span className="text-gray-300 italic text-xs">No groups assigned</span>
+      </div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 12, 2025</span>
+        <span className="text-orange-500 text-[10px] block font-semibold underline decoration-dotted">Call</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">Speedy</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-purple-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-purple-50 rounded-lg">
+      <User className="text-purple-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Muhammad Khokan</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 3, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Sk Abu Mahadi</div>
-        <div className="text-xs opacity-60">Nov 3,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full text-xs font-bold">
+          Contacted
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Contacted</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> Nov 4,2025 Meeting +2</div>
-    <div><b>Company:</b> M.M.Tr</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1.5">
+      <span className="text-gray-500 block text-[11px] uppercase tracking-wider font-bold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        <span className="text-gray-300 italic text-xs font-light tracking-wide">None</span>
+      </div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 4, 2025</span>
+        <span className="text-purple-500 text-[10px] block font-semibold flex items-center gap-1">
+          <span className="w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse"></span> Call
+        </span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">M.M.Tr</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-rose-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-rose-50 rounded-lg">
+      <User className="text-rose-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Sk Abu Mahadi</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 3, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Shakawat Nayon</div>
-        <div className="text-xs opacity-60">Nov 3,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-rose-100 text-rose-700 rounded-full text-xs font-bold">
+          Contacted
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Intersected</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> __</div>
-    <div><b>Company:</b> Jumona</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1.5">
+      <span className="text-gray-500 block text-[11px] uppercase tracking-wider font-bold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        <span className="text-gray-300 italic text-xs font-light">Not assigned</span>
+      </div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 4, 2025</span>
+        <div className="flex items-center gap-1 mt-0.5">
+          <span className="text-rose-600 text-[10px] font-bold px-1.5 py-0.5 bg-rose-50 rounded border border-rose-100">
+            Meeting +2
+          </span>
+        </div>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">M.M.Tr</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-emerald-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-emerald-50 rounded-lg">
+      <User className="text-emerald-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Shakawat Nayon</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 3, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Muhammad Al-Mamun</div>
-        <div className="text-xs opacity-60">Nov 2,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold">
+          Intersected
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Intersected</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> Nov 2,2025 Call</div>
-    <div><b>Company:</b> M&M</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1.5">
+      <span className="text-gray-500 block text-[11px] uppercase tracking-wider font-bold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        <span className="text-gray-300 italic text-xs font-light">Not specified</span>
+      </div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-300 text-xs">—</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">Jumona</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-emerald-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-emerald-50 rounded-lg">
+      <User className="text-emerald-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Muhammad Al-Mamun</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 2, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">m a k Azad</div>
-        <div className="text-xs opacity-60">Nov 2,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold text-gray-400">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold">
+          Intersected
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Intake</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> Nov 3,2025 Call</div>
-    <div><b>Company:</b> gov</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1">
+      <span className="text-gray-400 block text-[10px] uppercase font-bold">Groups</span>
+      <div className="text-gray-300 italic text-xs">No groups</div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 2, 2025</span>
+        <span className="text-emerald-600 text-[10px] block font-bold mt-0.5">Call</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">M&M</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-amber-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-amber-50 rounded-lg">
+      <User className="text-amber-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight uppercase">M A K Azad</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 2, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Fsisal Amin</div>
-        <div className="text-xs opacity-60">Nov 2,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-amber-100 text-amber-700 rounded-full text-[10px] font-bold">
+          Intake
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Intake</div>
-    <div><b>Groups:</b> --</div>
-    <div><b>Follow:</b> Nov 6,2025 Call</div>
-    <div><b>Company:</b> Long..</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1">
+      <span className="text-gray-400 block text-[10px] uppercase font-bold">Groups</span>
+      <div className="text-gray-300 italic text-xs font-light">None</div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 3, 2025</span>
+        <span className="text-amber-600 text-[10px] block font-bold mt-0.5">Call</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">Gov</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-amber-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-amber-50 rounded-lg">
+      <User className="text-amber-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Faisal Amin</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 2, 2025</div>
+    </div>
   </div>
 
-  <div className="border rounded-lg p-3 shadow bg-white space-y-2">
-    <div className="flex gap-2">
-      <User className="bg-gray-300 rounded-md" />
-      <div>
-        <div className="font-bold">Nabid Salehin Niloy</div>
-        <div className="text-xs opacity-60">Nov 2,2025</div>
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-amber-100 text-amber-700 rounded-full text-[10px] font-bold">
+          Intake
+        </span>
       </div>
     </div>
-    <div><b>Source:</b> Facebook</div>
-    <div><b>Stage:</b> Intersected</div>
-    <div><b>Groups:</b> Bashundhara</div>
-    <div><b>Follow:</b> Nov 7,2025 Call</div>
-    <div><b>Company:</b> __</div>
+
+    {/* Groups Section */}
+    <div className="space-y-1">
+      <span className="text-gray-400 block text-[10px] uppercase font-bold">Groups</span>
+      <div className="text-gray-300 italic text-xs font-light tracking-wide">None</div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 6, 2025</span>
+        <span className="text-amber-600 text-[10px] block font-bold mt-0.5">Call</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-700 text-xs font-medium">Long..</span>
+      </div>
+    </div>
   </div>
+</div>
+
+<div className="max-w-sm border border-gray-100 rounded-xl p-5 shadow-sm bg-white hover:shadow-md transition-all duration-300 border-l-4 border-l-emerald-500">
+  {/* Header Section */}
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-emerald-50 rounded-lg">
+      <User className="text-emerald-600 w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-semibold text-gray-800 text-lg leading-tight">Nabid Salehin Niloy</div>
+      <div className="text-[11px] text-gray-400 font-medium">Nov 2, 2025</div>
+    </div>
+  </div>
+
+  {/* Info Section */}
+  <div className="space-y-3 text-sm">
+    {/* Source & Stage */}
+    <div className="flex justify-between items-center border-b border-gray-50 pb-2">
+      <div className="flex flex-col">
+        <span className="text-[10px] text-gray-400 uppercase font-bold text-gray-400">Source</span>
+        <span className="font-medium text-gray-700">Facebook</span>
+      </div>
+      <div className="text-right">
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Stage</span>
+        <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold">
+          Intersected
+        </span>
+      </div>
+    </div>
+
+    {/* Groups Section */}
+    <div className="space-y-1.5">
+      <span className="text-gray-400 block text-[10px] uppercase font-bold">Groups</span>
+      <div className="flex flex-wrap gap-1">
+        <span className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-[10px] border border-gray-200 font-medium">
+          Bashundhara
+        </span>
+      </div>
+    </div>
+
+    {/* Follow & Company */}
+    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-gray-50">
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Follow Up</span>
+        <span className="text-gray-700 text-xs font-medium">Nov 7, 2025</span>
+        <span className="text-emerald-600 text-[10px] block font-bold mt-0.5 italic">Call</span>
+      </div>
+      <div>
+        <span className="text-[10px] text-gray-400 uppercase font-bold block">Company</span>
+        <span className="text-gray-300 text-xs">—</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 

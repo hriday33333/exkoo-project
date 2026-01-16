@@ -196,7 +196,7 @@ const Root = () => {
                 </ul>
               </div>
             </div>
-            <div className="border min-h-screen flex-5">
+            <div className="border min-h-screen flex-5 p-3">
               <div className="w-full border mx-auto h-20">fff</div>
               <Table></Table>
               <div className='border'>

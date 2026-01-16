@@ -99,7 +99,7 @@ const Root = () => {
           </nav>
           {/* Page content here */}
 
-          <div className="flex">
+          <div className="flex border-r border-gray-300">
             <div className=" min-h-screen  flex-1">
               <div className="flex min-h-full flex-col items-start bg-base-300 is-drawer-close:w-14 is-drawer-open:w-64">
                 {/* Sidebar content here */}
@@ -204,6 +204,7 @@ const Root = () => {
                       <span className="hidden md:inline">Integrations</span>
                     </button>
                   </li>
+
                 </ul>
               </div>
             </div>
@@ -223,7 +224,7 @@ const Root = () => {
           ></label>
           <div className="flex min-h-full flex-col items-start bg-base-300 is-drawer-close:w-14 is-drawer-open:w-64">
             {/* Sidebar content here */}
-            <ul className="menu w-full grow">
+            <ul className="menu w-full grow border-r border-gray-300 px-2">
               {/* List item */}
               <li>
                 <button
@@ -311,7 +312,7 @@ const Root = () => {
                   <span className="is-drawer-close:hidden">HR</span>
                 </button>
               </li>
-              <li>
+              <li className=''>
                 <button
                   className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
                   data-tip="Settings"
@@ -319,6 +320,16 @@ const Root = () => {
                   {/* Settings icon */}
                   <CalendarCheck className="my-1.5 inline-block size-4" />
                   <span className="is-drawer-close:hidden">Appointment</span>
+                </button>
+              </li>
+              <li className=' mt-70'>
+                <button
+                  className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                  data-tip="Settings"
+                >
+                  {/* Settings icon */}
+                  <Settings  className="my-1.5 inline-block size-4" />
+                  <span className="is-drawer-close:hidden">Settings</span>
                 </button>
               </li>
             </ul>

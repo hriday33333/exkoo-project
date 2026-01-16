@@ -1,4 +1,5 @@
 import {
+  ArrowBigRightDash,
   Bell,
   Briefcase,
   CalendarCheck,
@@ -9,7 +10,6 @@ import {
   FileText,
   FolderKanban,
   GitPullRequest,
-  Home,
   House,
   LayoutDashboard,
   Mail,
@@ -45,7 +45,7 @@ const Root = () => {
                 aria-label="open sidebar"
                 className="btn btn-ghost btn-xs p-0 hover:bg-transparent"
               >
-                <Home className="size-4 " />
+                <ArrowBigRightDash className="size-4" />
               </label>
               <ChevronRight className="size-3 " />
               <span className="cursor-pointer ">CRM</span>
